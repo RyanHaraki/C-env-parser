@@ -40,7 +40,7 @@ void print_map(Map *map, int size) {
 int main(int argc, char *argv[]) {
   if (argc != 2) {
     printf("Please pass one argument, the file path.");
-    return -1;
+    return 1;
   }
 
   char *file_path = argv[1]; // file path argument
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 
   if (file == NULL) {
     printf("File not found.");
-    return -1;
+    return 1;
   }
 
   char line[MAX_LINE_LENGTH];
@@ -78,5 +78,5 @@ int main(int argc, char *argv[]) {
     free(map[i].value);
   }
 
-  return 1;
+  return 0;
 }
