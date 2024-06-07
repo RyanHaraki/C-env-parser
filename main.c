@@ -11,6 +11,8 @@
 void parse_line(char line[], Map *map) {
   char *token = strtok(line, "=");
 
+  printf("I love basketball");
+
   if (token != NULL) {
     map->key = malloc(strlen(token) + 1);
     if (map->key != NULL) {
